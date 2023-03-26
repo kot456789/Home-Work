@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid: homework</title>
+
+    <style>
+      * {
+        margin: 0;
+      }
+      html,
+      body,
+      .container {
+        height: 100%;
+      }
+      .sidebar {
+        grid-area: sidebar;
+        background: #6dbe4f;
+      }
+      .header {
+        grid-area: header;
+        background: #6dbe4f;
+      }
+      .banner {
+        grid-area: banner;
+        background: #ec3437;
+      }
+      .news {
+        grid-area: news;
+        background: #6dbe4f;
+      }
+      .content1 {
+        grid-area: content1;
+        background: #fbb22f;
+      }
+      .content2 {
+        grid-area: content2;
+        background: #ec3437;
+      }
+      .content3 {
+        grid-area: content3;
+        background: #ec3437;
+      }
+      .content4 {
+        grid-area: content4;
+        background: #fbb22f;
+      }
+      div {
+        background: lightblue;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 150px 1tf 1fr 150px;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+        grid-template-areas:
+          "sidebar header header banner"
+          "sidebar content1 content2 news"
+          "sidebar content3 content4 news";
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="sidebar"></div>
+      <div class="header"></div>
+      <div class="banner"></div>
+      <div class="news"></div>
+
+      <div class="content1"></div>
+      <div class="content2"></div>
+      <div class="content3"></div>
+      <div class="content4"></div>
+    </main>
+  </body>
+</html>
